@@ -7,15 +7,15 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  /* Color palette — swap these when you have your brand colors */
-  --black: #111111;
-  --white: #ffffff;
-  --off-white: #f7f5f2;
-  --light-gray: #e8e5e0;
-  --mid-gray: #9a9490;
-  --text: #1a1a1a;
-  --accent: #c9a98e;      /* warm neutral — replace with your brand color */
-  --accent-dark: #a07d62;
+  /* Paleta de marca turincon.com */
+  --black: #2E2024;        /* Marrón espresso — títulos, textos, precios */
+  --white: #ffffff;        /* Blanco puro — fichas de producto, carrito */
+  --off-white: #FAF6F2;    /* Crema cálido — fondo general de la tienda */
+  --light-gray: #e8e3de;
+  --mid-gray: #9a918e;
+  --text: #2E2024;         /* Marrón espresso */
+  --accent: #EED9D7;       /* Rosa empolvado — banners, packs, etiquetas */
+  --accent-dark: #66334D;  /* Ciruela oscuro — botones Comprar/Añadir */
 
   /* Typography */
   --font-serif: 'Cormorant Garamond', Georgia, serif;
@@ -169,36 +169,37 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
   transition: all 0.25s;
 }
 .btn-solid {
-  background: var(--white);
-  color: var(--black);
+  background: var(--accent-dark);  /* ciruela oscuro */
+  color: var(--white);
 }
-.btn-solid:hover { background: var(--black); color: var(--white); }
+.btn-solid:hover { background: #521040; color: var(--white); }
 
 .btn-outline {
   background: transparent;
   color: var(--white);
   border: 1px solid rgba(255,255,255,0.7);
 }
-.btn-outline:hover { background: var(--white); color: var(--black); }
+.btn-outline:hover { background: var(--accent-dark); color: var(--white); border-color: var(--accent-dark); }
 
 .btn-white {
   background: var(--white);
-  color: var(--black);
+  color: var(--accent-dark);
+  border: 1px solid var(--accent-dark);
 }
-.btn-white:hover { background: var(--off-white); }
+.btn-white:hover { background: var(--accent-dark); color: var(--white); }
 
 .btn-dark {
-  background: var(--black);
+  background: var(--accent-dark);  /* ciruela oscuro */
   color: var(--white);
 }
-.btn-dark:hover { background: #333; }
+.btn-dark:hover { background: #521040; }
 
 .btn-white-outline {
   background: transparent;
   color: var(--white);
   border: 1px solid rgba(255,255,255,0.6);
 }
-.btn-white-outline:hover { background: var(--white); color: var(--black); }
+.btn-white-outline:hover { background: var(--white); color: var(--accent-dark); }
 
 /* --- HERO --- */
 .hero {
@@ -388,12 +389,12 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
   font-weight: 600;
   text-transform: uppercase;
   background: var(--white);
-  color: var(--black);
+  color: var(--accent-dark);  /* ciruela oscuro */
   padding: 4px 10px;
 }
 .product-badge.popular {
-  background: var(--accent);
-  color: var(--white);
+  background: var(--accent);    /* rosa empolvado */
+  color: var(--accent-dark);    /* ciruela oscuro */
 }
 
 .product-info h3 {
@@ -524,7 +525,7 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
   font-size: 10px;
   letter-spacing: 0.12em;
   font-weight: 600;
-  color: var(--accent-dark);
+  color: var(--accent-dark);   /* ciruela oscuro */
   text-transform: uppercase;
   display: block;
   margin-bottom: 0.5rem;
