@@ -1,5 +1,5 @@
 /* ============================================
-   TU RINCÓN — Main Stylesheet
+   MIEL Y BELLA — Main Stylesheet
    Inspired by alephbeauty.com aesthetic
    ============================================ */
 
@@ -7,7 +7,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  /* Paleta de marca turincon.com */
+  /* Paleta de marca mielybella.com */
   --black: #2E2024;        /* Marrón espresso — títulos, textos, precios */
   --white: #ffffff;        /* Blanco puro — fichas de producto, carrito */
   --off-white: #FAF6F2;    /* Crema cálido — fondo general de la tienda */
