@@ -10,7 +10,7 @@
   /* Paleta de marca mielybella.com */
   --black: #2E2024;        /* Marrón espresso — títulos, textos, precios */
   --white: #ffffff;        /* Blanco puro — fichas de producto, carrito */
-  --off-white: #FAF6F2;    /* Crema cálido — fondo general de la tienda */
+  --off-white: #F5D98A;    /* Miel dorado — fondo general de la tienda */
   --light-gray: #e8e3de;
   --mid-gray: #9a918e;
   --text: #2E2024;         /* Marrón espresso */
@@ -35,7 +35,7 @@ body {
   font-family: var(--font-sans);
   font-size: 14px;
   color: var(--text);
-  background: var(--white);
+  background: var(--off-white);
   overflow-x: hidden;
   letter-spacing: 0.01em;
 }
@@ -553,6 +553,9 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
   text-transform: uppercase;
   display: block;
   margin-bottom: 0.5rem;
+}
+.journal-info {
+  padding-bottom: 1.5rem;
 }
 .journal-info h3 {
   font-family: var(--font-serif);
