@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu Rincón — Simple. Natural. Tuyo.</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar">
+    <p>Envío gratuito a partir de 50€ &nbsp;→&nbsp; Descubre nuestra nueva colección</p>
+    <button class="announcement-close" aria-label="Cerrar">✕</button>
+  </div>
+
+  <!-- HEADER / NAV -->
+  <header class="header" id="header">
+    <nav class="nav-left">
+      <a href="#">TIENDA</a>
+      <a href="#">NOVEDADES</a>
+      <a href="#">NOSOTROS</a>
+      <a href="#">SOSTENIBILIDAD</a>
+    </nav>
+
+    <a href="/" class="logo">TU RINCÓN</a>
+
+    <nav class="nav-right">
+      <a href="#">RECOMPENSAS</a>
+      <a href="#">BLOG</a>
+      <a href="#">MI CUENTA</a>
+      <button class="icon-btn" aria-label="Buscar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <button class="icon-btn cart-btn" aria-label="Carrito">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        CESTA (0)
+      </button>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">✕</button>
+    <nav>
+      <a href="#">Tienda</a>
+      <a href="#">Novedades</a>
+      <a href="#">Nosotros</a>
+      <a href="#">Sostenibilidad</a>
+      <a href="#">Blog</a>
+      <a href="#">Mi Cuenta</a>
+    </nav>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=900&q=80" alt="Productos de belleza natural" loading="eager">
+      <div class="hero-monogram">T</div>
+    </div>
+    <div class="hero-right">
+      <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=900&q=80" alt="Mujer con piel radiante" loading="eager">
+      <div class="hero-monogram">R</div>
+    </div>
+    <div class="hero-ctas">
+      <a href="#" class="btn btn-solid">COMPRAR AHORA</a>
+      <a href="#" class="btn btn-outline">ENCUENTRA TU TONO</a>
+    </div>
+  </section>
+
+  <!-- TAGLINE -->
+  <section class="tagline">
+    <h2>Simple. Natural. Tuyo.</h2>
+    <p>Dosis clínicamente probadas de ingredientes bioactivos para cuidar tu piel con el tiempo.</p>
+  </section>
+
+  <!-- CATEGORIES GRID -->
+  <section class="categories">
+    <div class="category-item">
+      <img src="https://images.unsplash.com/photo-1570194065650-d99fb4bedf0a?w=600&q=80" alt="Hidratación">
+      <div class="category-label">Hidratación</div>
+    </div>
+    <div class="category-item">
+      <img src="https://images.unsplash.com/photo-1512207736890-6ffed8a84e8d?w=600&q=80" alt="Maquillaje">
+      <div class="category-label">Maquillaje</div>
+    </div>
+    <div class="category-item">
+      <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=600&q=80" alt="Cuidado facial">
+      <div class="category-label">Cuidado Facial</div>
+    </div>
+  </section>
+
+  <!-- FULL BANNER -->
+  <section class="full-banner">
+    <img src="https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=1600&q=80" alt="Empieza con lo esencial" loading="lazy">
+    <div class="full-banner-text">
+      <h2>Empieza con<br>Lo Esencial</h2>
+      <p>Incluye 5 productos esenciales<br>+ Muestras gratuitas</p>
+      <a href="#" class="btn btn-white">EXPLORAR KIT</a>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products" id="productos">
+    <div class="products-header">
+      <h2>Favoritos de Clientas</h2>
+      <a href="#" class="shop-all-link">VER TODO</a>
+    </div>
+    <div class="products-grid">
+
+      <article class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=500&q=80" alt="Kit Esenciales" loading="lazy">
+          <span class="product-badge">Bundle</span>
+        </div>
+        <div class="product-info">
+          <h3>Kit Esenciales</h3>
+          <p class="product-sub">5 productos clave</p>
+          <div class="product-price">
+            <span class="old-price">€131,95</span>
+            <span class="new-price">€104,95</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=500&q=80" alt="La Crema" loading="lazy">
+          <span class="product-badge popular">Popular</span>
+        </div>
+        <div class="product-info">
+          <h3>La Crema</h3>
+          <p class="product-sub">Hidratación profunda</p>
+          <span class="price">€62,95</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?w=500&q=80" alt="Base Perfecta" loading="lazy">
+          <span class="product-badge popular">Popular</span>
+        </div>
+        <div class="product-info">
+          <h3>Base Perfecta</h3>
+          <p class="product-sub">Cobertura natural</p>
+          <span class="price">€31,95</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1583241475880-083f84372725?w=500&q=80" alt="Máscara Lifting" loading="lazy">
+          <span class="product-badge popular">Popular</span>
+        </div>
+        <div class="product-info">
+          <h3>Máscara Lifting</h3>
+          <p class="product-sub">Volumen extremo</p>
+          <span class="price">€31,95</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SPLIT SECTION -->
+  <section class="split-section">
+    <div class="split-text">
+      <span class="split-eyebrow">NUESTRO COMPROMISO</span>
+      <h2>La belleza no tiene por qué comprometer nada.</h2>
+      <p>Creemos en fórmulas limpias, ingredientes honestos y resultados que se ven. Cada producto es un acto de cuidado contigo misma y con el planeta.</p>
+      <a href="#" class="btn btn-dark">CONOCE NUESTRA HISTORIA</a>
+    </div>
+    <div class="split-image">
+      <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80" alt="Mujer con piel natural" loading="lazy">
+    </div>
+  </section>
+
+  <!-- DARK BANNER -->
+  <section class="dark-banner">
+    <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1600&q=80" alt="La belleza no necesita compromisos" loading="lazy">
+    <div class="dark-banner-text">
+      <h2>La belleza no necesita compromisos.</h2>
+      <p>Tu Rincón está comprometido con una belleza limpia y ética,<br>desde los ingredientes hasta el envase.</p>
+      <a href="#" class="btn btn-white-outline">LEER MÁS</a>
+    </div>
+  </section>
+
+  <!-- JOURNAL / BLOG -->
+  <section class="journal">
+    <div class="journal-header">
+      <h2>Del Blog</h2>
+      <a href="#" class="shop-all-link">VER TODOS</a>
+    </div>
+    <div class="journal-grid">
+      <article class="journal-card">
+        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&q=80" alt="Rutina matinal" loading="lazy">
+        <div class="journal-info">
+          <span class="journal-tag">RUTINAS</span>
+          <h3>La rutina matinal perfecta para pieles sensibles</h3>
+          <a href="#" class="read-more">Leer más →</a>
+        </div>
+      </article>
+      <article class="journal-card">
+        <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80" alt="Ingredientes naturales" loading="lazy">
+        <div class="journal-info">
+          <span class="journal-tag">INGREDIENTES</span>
+          <h3>5 ingredientes que tu piel agradecerá este invierno</h3>
+          <a href="#" class="read-more">Leer más →</a>
+        </div>
+      </article>
+      <article class="journal-card">
+        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80" alt="Maquillaje minimalista" loading="lazy">
+        <div class="journal-info">
+          <span class="journal-tag">TENDENCIAS</span>
+          <h3>Maquillaje minimalista: menos es más</h3>
+          <a href="#" class="read-more">Leer más →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+
+      <div class="footer-newsletter">
+        <span class="footer-eyebrow">NEWSLETTER</span>
+        <h3>Suscríbete y recibe<br>un 10% en tu primera compra.</h3>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="Tu correo electrónico" required>
+          <button type="submit">UNIRSE</button>
+        </form>
+      </div>
+
+      <nav class="footer-nav">
+        <div class="footer-col">
+          <a href="#">Inicio</a>
+          <a href="#">Tienda</a>
+          <a href="#">Encuentra tu tono</a>
+          <a href="#">Nosotros</a>
+          <a href="#">Sostenibilidad</a>
+          <a href="#">Blog</a>
+        </div>
+        <div class="footer-col">
+          <a href="#">Vídeos</a>
+          <a href="#">Ayuda / FAQs</a>
+          <a href="#">Recompensas</a>
+          <a href="#">Encuentra una tienda</a>
+          <a href="#">Envíos y devoluciones</a>
+          <a href="#">Contáctanos</a>
+        </div>
+      </nav>
+
+      <div class="footer-social">
+        <span class="footer-eyebrow">SÍGUENOS</span>
+        <div class="social-icons">
+          <a href="#" aria-label="Instagram">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="TikTok">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.26 8.26 0 0 0 4.84 1.56V6.78a4.85 4.85 0 0 1-1.07-.09z"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 TU RINCÓN. TODOS LOS DERECHOS RESERVADOS.</span>
+      <div class="footer-legal">
+        <a href="#">Términos y condiciones</a>
+        <a href="#">Política de privacidad</a>
+        <a href="#">Cookies</a>
+        <a href="#">Accesibilidad</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
