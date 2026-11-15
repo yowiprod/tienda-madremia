@@ -16,6 +16,7 @@
   --text: #2E2024;         /* Marrón espresso */
   --accent: #EED9D7;       /* Rosa empolvado — banners, packs, etiquetas */
   --accent-dark: #66334D;  /* Ciruela oscuro — botones Comprar/Añadir */
+  --terracota: #A05A32;    /* Terracota — «y» del logo, iconos, separadores */
 
   /* Typography */
   --font-serif: 'Cormorant Garamond', Georgia, serif;
@@ -104,6 +105,13 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
   left: 50%;
   transform: translateX(-50%);
 }
+/* La «y» del logo en terracota — reemplazar span cuando llegue el logo real */
+.logo-y {
+  color: var(--terracota);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
 
 .icon-btn {
   display: flex;
@@ -113,7 +121,8 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
   letter-spacing: 0.08em;
   font-weight: 500;
 }
-.icon-btn:hover { opacity: 0.6; }
+.icon-btn:hover { color: var(--terracota); opacity: 1; }
+.icon-btn svg { transition: color 0.2s; }
 
 .hamburger { display: none; flex-direction: column; gap: 5px; }
 .hamburger span {
@@ -356,9 +365,10 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
   letter-spacing: 0.1em;
   font-weight: 600;
   text-transform: uppercase;
-  border-bottom: 1px solid currentColor;
+  color: var(--terracota);
+  border-bottom: 1px solid var(--terracota);
   padding-bottom: 2px;
-  opacity: 0.6;
+  opacity: 0.75;
   transition: opacity 0.2s;
 }
 .shop-all-link:hover { opacity: 1; }
@@ -432,7 +442,7 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
 .split-eyebrow {
   font-size: 10px;
   letter-spacing: 0.15em;
-  color: var(--mid-gray);
+  color: var(--terracota);    /* terracota en eyebrows */
   font-weight: 600;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
@@ -540,9 +550,10 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
 .read-more {
   font-size: 12px;
   letter-spacing: 0.06em;
-  border-bottom: 1px solid currentColor;
+  color: var(--terracota);
+  border-bottom: 1px solid var(--terracota);
   padding-bottom: 2px;
-  opacity: 0.6;
+  opacity: 0.75;
   transition: opacity 0.2s;
 }
 .read-more:hover { opacity: 1; }
@@ -563,7 +574,8 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
   display: block;
   font-size: 10px;
   letter-spacing: 0.15em;
-  opacity: 0.5;
+  color: var(--accent);       /* rosa empolvado sobre fondo negro */
+  opacity: 0.9;
   margin-bottom: 1rem;
   text-transform: uppercase;
 }
@@ -628,8 +640,8 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
 
 .footer-social { padding-top: 1.5rem; }
 .social-icons { display: flex; gap: 1.2rem; margin-top: 0.5rem; }
-.social-icons a { opacity: 0.7; transition: opacity 0.2s; }
-.social-icons a:hover { opacity: 1; }
+.social-icons a { opacity: 0.7; transition: opacity 0.2s, color 0.2s; }
+.social-icons a:hover { opacity: 1; color: var(--accent); }
 
 .footer-bottom {
   display: flex;
