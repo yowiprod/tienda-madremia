@@ -6,7 +6,7 @@
   <title>Zima — Adiós al frío en el baño en 3, 2, 1</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -21,42 +21,59 @@
 
   <!-- HEADER -->
   <header class="header" id="header">
-    <a href="/" class="logo">ZIMA</a>
     <nav class="nav-links">
       <a href="#producto">El producto</a>
       <a href="#faq">Preguntas</a>
     </nav>
-    <a href="#pedir" class="btn-cta-nav">Pedir ahora</a>
+    <a href="/" class="logo">ZIMA</a>
+    <div class="nav-right">
+      <a href="#pedir" class="btn-cta-nav">Pedir ahora</a>
+    </div>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-text">
-        <p class="eyebrow">Calefactor cerámico de enchufe · 900W</p>
-        <h1>Adiós al frío<br>en el baño<br><em>en 3, 2, 1.</em></h1>
-        <p class="hero-desc">Enchúfalo a cualquier enchufe. Calor en segundos. Sin instalación, sin cables, sin esperas.</p>
-        <a href="#pedir" class="btn-primary">
-          PEDIR AHORA
-          <span>Pago al recibir · Sin tarjeta</span>
-        </a>
-        <ul class="hero-checks">
-          <li>✓ Envío en 24–48h a toda España</li>
-          <li>✓ Pagas solo cuando llega a tu puerta</li>
-          <li>✓ Garantía 30 días sin preguntas</li>
-        </ul>
-      </div>
-      <div class="hero-visual">
-        <!-- REEMPLAZAR con foto real del producto ES44223 de Dropea -->
-        <div class="product-card-hero">
-          <div class="product-glow-ring"></div>
-          <div class="product-placeholder">
-            <div class="plug-icon">⚡</div>
-            <p>Calefactor<br>Zima 900W</p>
-          </div>
-          <div class="price-badge">€29,95</div>
+    <p class="hero-eyebrow">Calefactor cerámico de enchufe · 900W</p>
+
+    <h1 class="hero-title">
+      Adiós al frío<br>en el baño<br><em>en 3, 2, 1.</em>
+    </h1>
+
+    <!-- Producto flotante -->
+    <div class="hero-product">
+      <div class="product-floating">
+        <div class="product-placeholder">
+          <div class="plug-icon">⚡</div>
         </div>
+        <div class="price-badge">€29,95</div>
       </div>
+    </div>
+
+    <a href="#pedir" class="btn-primary">
+      PEDIR AHORA
+      <span>Pago al recibir · Sin tarjeta</span>
+    </a>
+
+    <ul class="hero-checks">
+      <li>✓ Envío en 24–48h a toda España</li>
+      <li>✓ Pagas solo cuando llega a tu puerta</li>
+      <li>✓ Garantía 30 días sin preguntas</li>
+    </ul>
+
+    <!-- ARCH DOME -->
+    <div class="hero-arch">
+      <svg class="arch-svg" viewBox="0 0 1200 420" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax meet">
+        <!-- Dome shape -->
+        <path d="M 0 420 L 0 300 C 200 10, 1000 10, 1200 300 L 1200 420 Z" fill="#5D1A23"/>
+        <!-- Text path along the top of the dome -->
+        <path id="archCurve" d="M 60 300 C 260 10, 940 10, 1140 300" fill="none"/>
+        <text fill="#FDF3EB" font-size="19" letter-spacing="5" text-anchor="middle"
+              font-family="'Playfair Display', Georgia, serif">
+          <textPath href="#archCurve" startOffset="50%">
+            CALOR EN 3 SEGUNDOS · SIN INSTALACIÓN · PAGO AL RECIBIR · ENVÍO 24H ·
+          </textPath>
+        </text>
+      </svg>
     </div>
   </section>
 
@@ -102,7 +119,7 @@
   <!-- FEATURES -->
   <section class="features">
     <div class="features-inner">
-      <p class="section-label">La solución</p>
+      <span class="section-label">La solución</span>
       <h2>El calefactor que cabe en tu enchufe y calienta tu baño en segundos</h2>
       <div class="features-grid">
         <div class="feature-card">
