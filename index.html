@@ -3,78 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zima — Adiós al frío en el baño en 3, 2, 1</title>
+  <title>ZIMA — Calefactor 900W · Pago al recibir</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- ANNOUNCEMENT BAR -->
-  <div class="announcement-bar">
-    <span>🔥 Pago contra reembolso</span>
-    <span class="sep">·</span>
-    <span>Envío 24-48h</span>
-    <span class="sep">·</span>
-    <span>Sin tarjeta. Pagas cuando llega.</span>
-  </div>
-
-  <!-- HEADER -->
-  <header class="header" id="header">
-    <nav class="nav-links">
-      <a href="#producto">El producto</a>
-      <a href="#faq">Preguntas</a>
-    </nav>
-    <a href="/" class="logo">ZIMA</a>
-    <div class="nav-right">
-      <a href="#pedir" class="btn-cta-nav">Pedir ahora</a>
+  <!-- SITE HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="site-header__bar">
+      <div class="site-header__side site-header__side--start">
+        <span class="site-header__tag">🔥 Envío 24-48h</span>
+      </div>
+      <div class="site-header__center">
+        <a href="/" class="site-header__logo">ZIMA</a>
+      </div>
+      <div class="site-header__side site-header__side--end">
+        <a href="#pedir" class="site-header__cta">Pedir ahora</a>
+      </div>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <p class="hero-eyebrow">Calefactor cerámico de enchufe · 900W</p>
+  <!-- JAR SLIDER HERO -->
+  <section class="jar-slider" id="jar-slider">
 
-    <h1 class="hero-title">
-      Adiós al frío<br>en el baño<br><em>en 3, 2, 1.</em>
-    </h1>
+    <!-- Background arch dome layer -->
+    <div class="jar-slider__shape-layer" id="shapeLayer">
+      <svg class="jar-slider__shape-image" viewBox="0 0 1407 601" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax meet">
+        <ellipse cx="703.5" cy="601" rx="703.5" ry="601" fill="#762530"/>
+        <ellipse cx="703.5" cy="601" rx="600" ry="520" fill="#6B1E28" opacity="0.4"/>
+      </svg>
 
-    <!-- Producto flotante -->
-    <div class="hero-product">
-      <div class="product-floating">
-        <div class="product-placeholder">
-          <div class="plug-icon">⚡</div>
-        </div>
-        <div class="price-badge">€29,95</div>
+      <!-- Circular rotating badge -->
+      <div class="jar-slider__badge jar-slider__badge--artwork" id="sliderBadge">
+        <svg class="jar-slider__badge-artwork" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <path id="circleTextPath" d="M 200 200 m -145,0 a 145,145 0 1,1 290,0 a 145,145 0 1,1 -290,0"/>
+          </defs>
+          <text font-family="'DM Sans', sans-serif" font-size="20" fill="#762530" letter-spacing="5">
+            <textPath href="#circleTextPath" startOffset="0%">ZIMA · CALOR EN 3 SEG · SIN INSTALACIÓN · PAGO AL RECIBIR ·</textPath>
+          </text>
+          <text x="200" y="221" text-anchor="middle" font-size="64" fill="#762530">⚡</text>
+        </svg>
       </div>
     </div>
 
-    <a href="#pedir" class="btn-primary">
-      PEDIR AHORA
-      <span>Pago al recibir · Sin tarjeta</span>
-    </a>
-
-    <ul class="hero-checks">
-      <li>✓ Envío en 24–48h a toda España</li>
-      <li>✓ Pagas solo cuando llega a tu puerta</li>
-      <li>✓ Garantía 30 días sin preguntas</li>
-    </ul>
-
-    <!-- ARCH DOME -->
-    <div class="hero-arch">
-      <svg class="arch-svg" viewBox="0 0 1200 420" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax meet">
-        <!-- Dome shape -->
-        <path d="M 0 420 L 0 300 C 200 10, 1000 10, 1200 300 L 1200 420 Z" fill="#5D1A23"/>
-        <!-- Text path along the top of the dome -->
-        <path id="archCurve" d="M 60 300 C 260 10, 940 10, 1140 300" fill="none"/>
-        <text fill="#FDF3EB" font-size="19" letter-spacing="5" text-anchor="middle"
-              font-family="'Playfair Display', Georgia, serif">
-          <textPath href="#archCurve" startOffset="50%">
-            CALOR EN 3 SEGUNDOS · SIN INSTALACIÓN · PAGO AL RECIBIR · ENVÍO 24H ·
-          </textPath>
-        </text>
-      </svg>
+    <!-- Hero headline (centered) -->
+    <div class="jar-slider__content" id="sliderContent">
+      <p class="jar-slider__eyebrow">Calefactor cerámico · 900W</p>
+      <h1 class="jar-slider__heading">Adiós al frío<br>en el baño.</h1>
+      <a href="#pedir" class="jar-slider__btn">
+        Pedir ahora
+        <span>Pago al recibir · Sin tarjeta</span>
+      </a>
     </div>
+
+    <!-- Products floating track -->
+    <div class="jar-slider__wrapper">
+      <div class="jar-slider__marquee">
+        <div class="jar-slider__track" id="jarTrack">
+          <div class="jar-slider__item">
+            <div class="heater-card"><span class="heater-card__icon">⚡</span><span class="heater-card__name">ZIMA</span></div>
+          </div>
+          <div class="jar-slider__item">
+            <div class="heater-card"><span class="heater-card__icon">⚡</span><span class="heater-card__name">ZIMA</span></div>
+          </div>
+          <div class="jar-slider__item">
+            <div class="heater-card"><span class="heater-card__icon">⚡</span><span class="heater-card__name">ZIMA</span></div>
+          </div>
+          <div class="jar-slider__item">
+            <div class="heater-card heater-card--focus"><span class="heater-card__icon">⚡</span><span class="heater-card__name">ZIMA</span><span class="heater-card__price">€29,95</span></div>
+          </div>
+          <div class="jar-slider__item">
+            <div class="heater-card"><span class="heater-card__icon">⚡</span><span class="heater-card__name">ZIMA</span></div>
+          </div>
+          <div class="jar-slider__item">
+            <div class="heater-card"><span class="heater-card__icon">⚡</span><span class="heater-card__name">ZIMA</span></div>
+          </div>
+          <div class="jar-slider__item">
+            <div class="heater-card"><span class="heater-card__icon">⚡</span><span class="heater-card__name">ZIMA</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll prompt -->
+    <div class="jar-slider__overlay">
+      <p class="jar-slider__prompt" id="sliderPrompt">Scroll para descubrir</p>
+    </div>
+
   </section>
 
   <!-- TRUST BAR -->
@@ -105,7 +123,7 @@
   <!-- PROBLEM SECTION -->
   <section class="problem" id="producto">
     <div class="problem-text">
-      <p class="section-label-dark">El problema</p>
+      <p class="section-label">El problema</p>
       <h2>¿Cuántas mañanas has saltado de la cama al baño con ese frío que corta?</h2>
       <p>En invierno, el baño es la habitación más fría de la casa. Ducharte a las 7 de la mañana, salir y quedarte congelado. Es el momento del día que nadie espera con ganas.</p>
       <p>Los radiadores tardan horas en calentar. Los toalleros no calientan el ambiente. Y una estufa grande no cabe en el baño.</p>
@@ -119,7 +137,7 @@
   <!-- FEATURES -->
   <section class="features">
     <div class="features-inner">
-      <span class="section-label">La solución</span>
+      <span class="section-label section-label--light">La solución</span>
       <h2>El calefactor que cabe en tu enchufe y calienta tu baño en segundos</h2>
       <div class="features-grid">
         <div class="feature-card">
@@ -149,7 +167,7 @@
   <!-- HOW TO ORDER -->
   <section class="how-to-order">
     <div class="how-to-order-inner">
-      <p class="section-label-dark">¿Cómo funciona el pedido?</p>
+      <p class="section-label">¿Cómo funciona el pedido?</p>
       <h2>Pides hoy. Lo recibes mañana. Pagas al abrir la puerta.</h2>
       <div class="steps">
         <div class="step">
@@ -174,7 +192,7 @@
   <!-- ORDER SECTION -->
   <section class="order-section" id="pedir">
     <div class="order-inner">
-      <p class="section-label-dark">Pide el tuyo hoy</p>
+      <p class="section-label">Pide el tuyo hoy</p>
       <h2>Zima Calefactor 900W</h2>
       <div class="price-display">€29,95</div>
       <p class="price-note">Precio final · Envío incluido · Pago contra reembolso</p>
