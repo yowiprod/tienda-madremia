@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZIMA — Sudadera Manta · Pedir</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+</head>
+<body class="page-product">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="/" class="site-header__lang" style="text-decoration:none">← INICIO</a>
+      <a href="/" class="site-header__logo">
+        <span class="site-header__logo-icon">✦</span>
+        <span class="site-header__logo-name">ZIMA</span>
+      </a>
+      <a href="#pedir" class="site-header__menu">PEDIR <span class="site-header__dot">●</span></a>
+    </div>
+  </header>
+
+  <!-- HERO PRODUCTO: fondo texto + imagen estática -->
+  <section class="product-hero">
+    <div class="product-hero__text-layer" aria-hidden="true">
+      <div class="product-hero__title">
+        <span class="product-hero__line product-hero__line--1">BATA</span>
+        <span class="product-hero__line product-hero__line--2">MANTA</span>
+      </div>
+    </div>
+
+    <div class="product-hero__img-wrap">
+      <img src="dropi/batamanta-huggia/zima-front.png" alt="Sudadera manta Zima azul marino">
+    </div>
+
+    <div class="product-hero__meta" aria-hidden="true">
+      <div class="product-hero__meta-left">
+        <span>Sudadera</span>
+        <span>Manta</span>
+      </div>
+      <div class="product-hero__meta-right">
+        <span>Talla Única</span>
+        <span>España</span>
+      </div>
+    </div>
+
+    <div class="product-hero__bottom">
+      <span class="product-hero__price">34,95 €</span>
+      <a href="#pedir" class="product-hero__btn">Pedir ahora →</a>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="divider"><span>◆</span></div>
+
+  <!-- DESCRIPCIÓN -->
+  <section class="description">
+    <p class="description__text">
+      Suave, cálida y envolvente. La Zima es la sudadera manta que convierte cada momento de relax en un abrazo. Interior borreguito sherpa, exterior microfibra premium. Con capucha amplia, bolsillo canguro y mangas con puños. Lavable a máquina.
+    </p>
+  </section>
+
+  <!-- PEDIDO -->
+  <section class="order" id="pedir">
+    <div class="order__inner">
+      <div class="order__info">
+        <p class="order__tag">◆ PAGO AL RECIBIR</p>
+        <h2 class="order__heading">Tu Zima, aquí en 24–48h</h2>
+        <p class="order__sub">Sin tarjeta. Sin riesgo. Pagas cuando llega.</p>
+        <ul class="order__features">
+          <li>✓ Envío gratuito a toda España</li>
+          <li>✓ Devolución garantizada 30 días</li>
+          <li>✓ Atención en español</li>
+        </ul>
+      </div>
+      <div class="order__form">
+        <div class="order__price">
+          <span class="order__price-num">34,95 €</span>
+          <span class="order__price-label">precio único</span>
+        </div>
+        <div id="orderSuccess"><p>✓ Pedido recibido — te llamamos pronto para confirmar.</p></div>
+        <form class="order__fields" id="orderForm" action="#" method="post" onsubmit="handleOrder(event)">
+          <input type="text"  name="nombre"    placeholder="Tu nombre"            required class="order__input">
+          <input type="tel"   name="telefono"  placeholder="Teléfono"             required class="order__input">
+          <input type="text"  name="direccion" placeholder="Dirección de entrega" required class="order__input">
+          <select name="color" class="order__input order__input--select">
+            <option value="">Color — elige uno</option>
+            <option>Azul marino</option>
+            <option>Gris</option>
+            <option>Negro</option>
+            <option>Rosa</option>
+          </select>
+          <button type="submit" class="order__btn">Pedir ahora — pago al recibir</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="divider"><span>◆</span></div>
+
+  <!-- DETAILS 3 COLUMNAS -->
+  <section class="details">
+    <div class="details__col">
+      <h3 class="details__label">POR QUÉ ZIMA</h3>
+      <p class="details__content">Interior sherpa de borreguito, exterior microfibra suave. Capucha ajustable, bolsillo canguro y puños en las mangas. Lavable a 30°.</p>
+    </div>
+    <div class="details__col details__col--center">
+      <h3 class="details__label">COLORES</h3>
+      <div class="details__pills">
+        <span class="details__pill">Azul marino</span>
+        <span class="details__pill">Gris</span>
+        <span class="details__pill">Negro</span>
+        <span class="details__pill">Rosa</span>
+      </div>
+    </div>
+    <div class="details__col">
+      <h3 class="details__label">MEDIDAS</h3>
+      <p class="details__content">Talla única. Largo aprox. 95–130 cm. Apta para adultos a partir de 155 cm.</p>
+    </div>
+  </section>
+
+  <!-- VISOR 360° -->
+  <section class="viewer3d" aria-label="Visor 360°">
+    <div class="viewer3d__header">
+      <span class="viewer3d__tag">◆ VISTA 360°</span>
+      <p class="viewer3d__hint">Arrastra o usa las flechas para girar</p>
+    </div>
+    <div class="viewer3d__stage" id="viewer3d">
+      <button class="viewer3d__arrow viewer3d__arrow--prev" id="v3dPrev" aria-label="Vista anterior">‹</button>
+      <div class="viewer3d__track" id="v3dTrack">
+        <img src="dropi/batamanta-huggia/zima-front.png"      class="viewer3d__img viewer3d__img--active" data-idx="0" alt="Frente"          draggable="false">
+        <img src="dropi/batamanta-huggia/zima-back.png"       class="viewer3d__img"                       data-idx="1" alt="Trasera"         draggable="false">
+        <img src="dropi/batamanta-huggia/zima-side-left.png"  class="viewer3d__img"                       data-idx="2" alt="Lateral izq"     draggable="false">
+        <img src="dropi/batamanta-huggia/zima-side-right.png" class="viewer3d__img"                       data-idx="3" alt="Lateral der"     draggable="false">
+      </div>
+      <button class="viewer3d__arrow viewer3d__arrow--next" id="v3dNext" aria-label="Vista siguiente">›</button>
+    </div>
+    <div class="viewer3d__dots" aria-hidden="true">
+      <button class="viewer3d__dot viewer3d__dot--active" data-idx="0"></button>
+      <button class="viewer3d__dot" data-idx="1"></button>
+      <button class="viewer3d__dot" data-idx="2"></button>
+      <button class="viewer3d__dot" data-idx="3"></button>
+    </div>
+    <div class="viewer3d__labels" aria-hidden="true">
+      <span>Frente</span><span>Trasera</span><span>Lateral izq.</span><span>Lateral der.</span>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="gallery">
+    <div class="gallery__track">
+      <div class="gallery__item">
+        <img src="dropi/batamanta-huggia/batamanta-huggia-03.jpg" alt="Zima lifestyle" loading="lazy">
+      </div>
+      <div class="gallery__item gallery__item--wide">
+        <img src="dropi/batamanta-huggia/batamanta-huggia-05.jpg" alt="Zima exterior" loading="lazy">
+      </div>
+      <div class="gallery__item">
+        <img src="dropi/batamanta-huggia/batamanta-huggia-06.jpg" alt="Zima relax" loading="lazy">
+      </div>
+      <div class="gallery__item">
+        <img src="dropi/batamanta-huggia/batamanta-huggia-07.jpg" alt="Zima detalle bolsillo" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <section class="marquee-section" aria-hidden="true">
+    <div class="marquee-title">
+      <span class="marquee-title__text">PEDIR</span>
+      <span class="marquee-title__text marquee-title__text--outline">ZIMA</span>
+      <span class="marquee-title__text">◆</span>
+      <span class="marquee-title__text">PEDIR</span>
+      <span class="marquee-title__text marquee-title__text--outline">ZIMA</span>
+      <span class="marquee-title__text">◆</span>
+      <span class="marquee-title__text">PEDIR</span>
+      <span class="marquee-title__text marquee-title__text--outline">ZIMA</span>
+      <span class="marquee-title__text">◆</span>
+      <span class="marquee-title__text">PEDIR</span>
+      <span class="marquee-title__text marquee-title__text--outline">ZIMA</span>
+      <span class="marquee-title__text">◆</span>
+      <span class="marquee-title__text">PEDIR</span>
+      <span class="marquee-title__text marquee-title__text--outline">ZIMA</span>
+      <span class="marquee-title__text">◆</span>
+      <span class="marquee-title__text">PEDIR</span>
+      <span class="marquee-title__text marquee-title__text--outline">ZIMA</span>
+      <span class="marquee-title__text">◆</span>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span class="site-footer__logo">ZIMA</span>
+      <p class="site-footer__copy">© 2025 Zima. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

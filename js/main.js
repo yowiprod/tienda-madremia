@@ -20,6 +20,44 @@
     }, { passive: true });
   }
 
+  // ===== 360° Viewer =====
+  (function () {
+    const stage = document.getElementById('viewer3d');
+    if (!stage) return;
+    const imgs  = [...stage.querySelectorAll('.viewer3d__img')];
+    const dots  = [...document.querySelectorAll('.viewer3d__dot')];
+    const prev  = document.getElementById('v3dPrev');
+    const next  = document.getElementById('v3dNext');
+    if (!imgs.length) return;
+
+    let current = 0;
+
+    function goTo(idx) {
+      imgs[current].classList.remove('viewer3d__img--active');
+      dots[current] && dots[current].classList.remove('viewer3d__dot--active');
+      current = (idx + imgs.length) % imgs.length;
+      imgs[current].classList.add('viewer3d__img--active');
+      dots[current] && dots[current].classList.add('viewer3d__dot--active');
+    }
+
+    if (prev) prev.addEventListener('click', function(e) { e.stopPropagation(); goTo(current - 1); });
+    if (next) next.addEventListener('click', function(e) { e.stopPropagation(); goTo(current + 1); });
+    dots.forEach(function(dot, i) { dot.addEventListener('click', function() { goTo(i); }); });
+
+    // Drag to rotate (only on the track, not buttons)
+    var dragStartX = 0, isDragging = false;
+    var track = stage.querySelector('.viewer3d__track');
+    if (track) {
+      track.addEventListener('mousedown', function(e) { isDragging = true; dragStartX = e.clientX; });
+      window.addEventListener('mousemove', function(e) {
+        if (!isDragging) return;
+        var dx = e.clientX - dragStartX;
+        if (Math.abs(dx) > 50) { goTo(current + (dx > 0 ? -1 : 1)); dragStartX = e.clientX; }
+      });
+      window.addEventListener('mouseup', function() { isDragging = false; });
+    }
+  })();
+
   // ===== FAQ accordion =====
   document.querySelectorAll('.faq-question').forEach(btn => {
     btn.addEventListener('click', () => {

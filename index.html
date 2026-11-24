@@ -3,307 +3,287 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZIMA — Calefactor 900W · Pago al recibir</title>
+  <title>ZIMA — Sudadera Manta</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="page-home">
 
-  <!-- SITE HEADER -->
+  <!-- HEADER -->
   <header class="site-header" id="site-header">
     <div class="site-header__bar">
       <div class="site-header__side site-header__side--start">
-        <span class="site-header__tag">🔥 Envío 24-48h</span>
+        <span class="site-header__tag">ES</span>
       </div>
       <div class="site-header__center">
-        <a href="/" class="site-header__logo">ZIMA</a>
+        <a href="/" class="site-header__logo">
+          <span class="site-header__logo-icon">✦</span>
+          <span>ZIMA</span>
+        </a>
       </div>
       <div class="site-header__side site-header__side--end">
-        <a href="#pedir" class="site-header__cta">Pedir ahora</a>
+        <a href="producto.html" class="site-header__menu">VER PRODUCTO <span class="site-header__dot">●</span></a>
       </div>
     </div>
   </header>
 
-  <!-- JAR SLIDER HERO -->
-  <section class="jar-slider" id="jar-slider">
+  <!-- HERO -->
+  <section class="hero" id="hero">
+  <div class="hero__sticky">
 
-    <!-- Background arch dome layer -->
-    <div class="jar-slider__shape-layer" id="shapeLayer">
-      <svg class="jar-slider__shape-image" viewBox="0 0 1407 601" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax meet">
-        <ellipse cx="703.5" cy="601" rx="703.5" ry="601" fill="#762530"/>
-        <ellipse cx="703.5" cy="601" rx="600" ry="520" fill="#6B1E28" opacity="0.4"/>
-      </svg>
+    <!-- Texto gigante detrás -->
+    <div class="hero__text-layer" aria-hidden="true">
+      <h1 class="hero__title">
+        <span class="hero__line hero__line--1">BATA</span>
+        <span class="hero__line hero__line--2">MANTA</span>
+      </h1>
+    </div>
 
-      <!-- Circular rotating badge -->
-      <div class="jar-slider__badge jar-slider__badge--artwork" id="sliderBadge">
-        <svg class="jar-slider__badge-artwork" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <path id="circleTextPath" d="M 200 200 m -145,0 a 145,145 0 1,1 290,0 a 145,145 0 1,1 -290,0"/>
-          </defs>
-          <text font-family="'DM Sans', sans-serif" font-size="20" fill="#762530" letter-spacing="5">
-            <textPath href="#circleTextPath" startOffset="0%">ZIMA · CALOR EN 3 SEG · SIN INSTALACIÓN · PAGO AL RECIBIR ·</textPath>
-          </text>
-          <text x="200" y="221" text-anchor="middle" font-size="64" fill="#762530">⚡</text>
-        </svg>
+    <!-- Visor 3D Three.js -->
+    <div class="hero__product" id="heroProduct">
+      <canvas id="zimaCanvas"></canvas>
+      <div class="spin-hint" id="spinHint" aria-hidden="true">
+        <span class="spin-hint__text">Arrastra para girar</span>
+      </div>
+      <span class="hero__product-cta" id="productCta" aria-hidden="true">Ver producto</span>
+    </div>
+
+    <!-- Meta esquinas -->
+    <div class="hero__meta" aria-hidden="true">
+      <div class="hero__meta-left">
+        <span>Sudadera</span>
+        <span>Manta</span>
+      </div>
+      <div class="hero__meta-right">
+        <span>Talla Única</span>
+        <span>España</span>
       </div>
     </div>
 
-    <!-- Hero headline (centered) -->
-    <div class="jar-slider__content" id="sliderContent">
-      <p class="jar-slider__eyebrow">Calefactor cerámico · 900W</p>
-      <h1 class="jar-slider__heading">Adiós al frío<br>en el baño.</h1>
-      <a href="#pedir" class="jar-slider__btn">
-        Pedir ahora
-        <span>Pago al recibir · Sin tarjeta</span>
-      </a>
+    <!-- Scroll hint — desaparece al scrollear -->
+    <div class="hero__scroll-hint" id="heroScrollHint" aria-hidden="true">
+      <span class="hero__scroll-hint__line"></span>
+      <span class="hero__scroll-hint__label">Desliza</span>
     </div>
 
-    <!-- Products floating track -->
-    <div class="jar-slider__wrapper">
-      <div class="jar-slider__marquee">
-        <div class="jar-slider__track" id="jarTrack">
-          <div class="jar-slider__item">
-            <div class="heater-card"><span class="heater-card__icon">⚡</span><span class="heater-card__name">ZIMA</span></div>
-          </div>
-          <div class="jar-slider__item">
-            <div class="heater-card"><span class="heater-card__icon">⚡</span><span class="heater-card__name">ZIMA</span></div>
-          </div>
-          <div class="jar-slider__item">
-            <div class="heater-card"><span class="heater-card__icon">⚡</span><span class="heater-card__name">ZIMA</span></div>
-          </div>
-          <div class="jar-slider__item">
-            <div class="heater-card heater-card--focus"><span class="heater-card__icon">⚡</span><span class="heater-card__name">ZIMA</span><span class="heater-card__price">€29,95</span></div>
-          </div>
-          <div class="jar-slider__item">
-            <div class="heater-card"><span class="heater-card__icon">⚡</span><span class="heater-card__name">ZIMA</span></div>
-          </div>
-          <div class="jar-slider__item">
-            <div class="heater-card"><span class="heater-card__icon">⚡</span><span class="heater-card__name">ZIMA</span></div>
-          </div>
-          <div class="jar-slider__item">
-            <div class="heater-card"><span class="heater-card__icon">⚡</span><span class="heater-card__name">ZIMA</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Scroll prompt -->
-    <div class="jar-slider__overlay">
-      <p class="jar-slider__prompt" id="sliderPrompt">Scroll para descubrir</p>
-    </div>
-
+  </div><!-- /.hero__sticky -->
   </section>
 
-  <!-- TRUST BAR -->
-  <div class="trust-bar">
-    <div class="trust-item">
-      <div class="trust-icon">📦</div>
-      <div class="trust-text">
-        <strong>Pago al recibir</strong>
-        <span>Sin tarjeta. Pagas en mano.</span>
-      </div>
-    </div>
-    <div class="trust-item">
-      <div class="trust-icon">🚚</div>
-      <div class="trust-text">
-        <strong>Envío 24-48h</strong>
-        <span>A toda España peninsular</span>
-      </div>
-    </div>
-    <div class="trust-item">
-      <div class="trust-icon">🛡️</div>
-      <div class="trust-text">
-        <strong>Garantía 30 días</strong>
-        <span>Devolución sin preguntas</span>
-      </div>
-    </div>
-  </div>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
 
-  <!-- PROBLEM SECTION -->
-  <section class="problem" id="producto">
-    <div class="problem-text">
-      <p class="section-label">El problema</p>
-      <h2>¿Cuántas mañanas has saltado de la cama al baño con ese frío que corta?</h2>
-      <p>En invierno, el baño es la habitación más fría de la casa. Ducharte a las 7 de la mañana, salir y quedarte congelado. Es el momento del día que nadie espera con ganas.</p>
-      <p>Los radiadores tardan horas en calentar. Los toalleros no calientan el ambiente. Y una estufa grande no cabe en el baño.</p>
-      <p><strong>Hasta ahora.</strong></p>
-    </div>
-    <div class="problem-image">
-      <img src="https://images.pexels.com/photos/1457847/pexels-photo-1457847.jpeg?auto=compress&cs=tinysrgb&w=700&h=500&fit=crop" alt="Baño frío en invierno" loading="lazy">
-    </div>
-  </section>
+  <script type="module">
+    import * as THREE from 'three';
+    import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+    import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 
-  <!-- FEATURES -->
-  <section class="features">
-    <div class="features-inner">
-      <span class="section-label section-label--light">La solución</span>
-      <h2>El calefactor que cabe en tu enchufe y calienta tu baño en segundos</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">⚡</div>
-          <h3>900W cerámica — Calor en 3 segundos</h3>
-          <p>La tecnología cerámica PTC calienta al instante. No esperas, no tiemblas. Enchufa y en 3 segundos notas el calor.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🔌</div>
-          <h3>Enchufe directo — Sin instalación</h3>
-          <p>Se conecta como un cargador. Sin herramientas, sin electricista, sin agujerear paredes. Cualquier enchufe vale.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🤫</div>
-          <h3>Silencioso — No molesta</h3>
-          <p>Funcionamiento completamente silencioso. Dúchate, habla o pon música sin que el calefactor moleste.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🛡️</div>
-          <h3>Protección automática — Seguro</h3>
-          <p>Se apaga solo si detecta sobrecalentamiento. Certificado CE. Totalmente seguro para usar en el baño.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    const container = document.getElementById('heroProduct');
+    const canvas    = document.getElementById('zimaCanvas');
+    const W = container.offsetWidth;
+    const H = container.offsetHeight;
 
-  <!-- HOW TO ORDER -->
-  <section class="how-to-order">
-    <div class="how-to-order-inner">
-      <p class="section-label">¿Cómo funciona el pedido?</p>
-      <h2>Pides hoy. Lo recibes mañana. Pagas al abrir la puerta.</h2>
-      <div class="steps">
-        <div class="step">
-          <div class="step-number">01</div>
-          <h3>Rellena el formulario</h3>
-          <p>Solo necesitas nombre, teléfono y dirección. Sin tarjeta, sin cuenta, sin contraseñas.</p>
-        </div>
-        <div class="step">
-          <div class="step-number">02</div>
-          <h3>Lo recibes en 24-48h</h3>
-          <p>El mensajero te llama antes de llegar. Comodidad total, a tu puerta y en tu horario.</p>
-        </div>
-        <div class="step">
-          <div class="step-number">03</div>
-          <h3>Pagas cuando llega</h3>
-          <p>Entregas el dinero al mensajero. Efectivo o tarjeta en el momento de la entrega. Cero riesgos.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    // --- Renderer ---
+    const renderer = new THREE.WebGLRenderer({
+      canvas,
+      antialias: true,
+      alpha: true,
+      powerPreference: 'high-performance'
+    });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(W, H);
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.1;
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
 
-  <!-- ORDER SECTION -->
-  <section class="order-section" id="pedir">
-    <div class="order-inner">
-      <p class="section-label">Pide el tuyo hoy</p>
-      <h2>Zima Calefactor 900W</h2>
-      <div class="price-display">€29,95</div>
-      <p class="price-note">Precio final · Envío incluido · Pago contra reembolso</p>
+    // --- Scene ---
+    const scene = new THREE.Scene();
+    scene.background = null;
 
-      <div class="cod-box">
-        <h3>💳 ¿Qué es el pago contra reembolso?</h3>
-        <ul class="cod-steps">
-          <li><span class="num">1</span><span>Haces el pedido aquí sin pagar nada.</span></li>
-          <li><span class="num">2</span><span>El mensajero te lleva Zima a casa en 24-48h.</span></li>
-          <li><span class="num">3</span><span>Solo pagas cuando tienes el producto en la mano.</span></li>
-        </ul>
-      </div>
+    // Environment IBL (iluminación indirecta de estudio)
+    const pmremGenerator = new THREE.PMREMGenerator(renderer);
+    pmremGenerator.compileEquirectangularShader();
+    scene.environment = pmremGenerator.fromScene(new RoomEnvironment(), 0.04).texture;
+    pmremGenerator.dispose();
 
-      <form class="order-form" id="orderForm" onsubmit="handleOrder(event)">
-        <input type="text" id="nombre" placeholder="Tu nombre completo" required>
-        <input type="tel" id="telefono" placeholder="Teléfono de contacto" required>
-        <input type="text" id="direccion" placeholder="Dirección de entrega completa" required>
-        <input type="text" id="ciudad" placeholder="Ciudad y código postal" required>
-        <button type="submit" class="btn-order">
-          PEDIR AHORA — PAGO AL RECIBIR 🔥
-        </button>
-      </form>
-      <div class="order-success" id="orderSuccess" style="display:none;">
-        <div class="success-icon">✅</div>
-        <h3>¡Pedido recibido!</h3>
-        <p>Te llamaremos en las próximas horas para confirmar la entrega. Prepárate para decirle adiós al frío.</p>
-      </div>
-      <p class="order-note">Al enviar el pedido un agente te contactará para confirmar la entrega.</p>
-    </div>
-  </section>
+    // --- Camera ---
+    const camera = new THREE.PerspectiveCamera(32, W / H, 0.01, 100);
+    camera.position.set(0, 0.05, 3.8);
 
-  <!-- REVIEWS -->
-  <section class="reviews">
-    <div class="reviews-inner">
-      <h2>Más de 2.000 clientes ya tienen el suyo</h2>
-      <div class="reviews-grid">
-        <div class="review-card">
-          <div class="stars">★★★★★</div>
-          <p>"Flipé con lo rápido que calienta el baño. Llevo semanas usándolo cada mañana. Mi mujer también lo quiere para la cocina."</p>
-          <div class="reviewer">
-            <div class="reviewer-avatar">JM</div>
-            <div>
-              <div class="reviewer-name">José Manuel R.</div>
-              <div class="reviewer-location">Valencia · hace 3 semanas</div>
-            </div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="stars">★★★★★</div>
-          <p>"Desconfiaba al principio, pero como era pago al recibir lo probé. Brutal. Pequeño, calienta un montón y no hace ruido. Vale cada euro."</p>
-          <div class="reviewer">
-            <div class="reviewer-avatar">AL</div>
-            <div>
-              <div class="reviewer-name">Ana L.</div>
-              <div class="reviewer-location">Madrid · hace 1 semana</div>
-            </div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="stars">★★★★★</div>
-          <p>"Lo pedí y al día siguiente ya estaba en casa. El mensajero muy amable. El producto funciona exactamente como dice. Muy recomendable."</p>
-          <div class="reviewer">
-            <div class="reviewer-avatar">PR</div>
-            <div>
-              <div class="reviewer-name">Pedro R.</div>
-              <div class="reviewer-location">Sevilla · hace 2 semanas</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    // --- Iluminación de estudio 3 puntos ---
+    // Luz clave (key light) — frontal derecha arriba, cálida
+    const keyLight = new THREE.DirectionalLight(0xfff5e0, 3.5);
+    keyLight.position.set(1.5, 2.5, 2.5);
+    keyLight.castShadow = true;
+    keyLight.shadow.mapSize.set(2048, 2048);
+    keyLight.shadow.camera.near = 0.1;
+    keyLight.shadow.camera.far = 20;
+    keyLight.shadow.bias = -0.001;
+    scene.add(keyLight);
 
-  <!-- FAQ -->
-  <section class="faq" id="faq">
-    <h2>Preguntas frecuentes</h2>
-    <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-question">¿Es seguro usar en el baño?<span class="faq-icon">+</span></button>
-        <div class="faq-answer">Sí. Zima tiene certificado CE y protección automática contra sobrecalentamiento. Enchúfalo siempre en un enchufe alejado del agua directa.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">¿Cuánto tarda en calentar?<span class="faq-icon">+</span></button>
-        <div class="faq-answer">La cerámica PTC empieza a generar calor en menos de 3 segundos. En 2-3 minutos notarás el baño considerablemente más cálido.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">¿Cuánto gasta de luz?<span class="faq-icon">+</span></button>
-        <div class="faq-answer">900W durante 20 minutos (una ducha) son unos 0,05€. Menos de 1€ al mes si lo usas cada día. Mucho más eficiente que dejar el radiador encendido horas.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">¿Y si no me gusta cuando llega?<span class="faq-icon">+</span></button>
-        <div class="faq-answer">Si al abrir la caja no te convence, simplemente no lo cojas. No estás obligado a aceptarlo. Y si ya lo tienes y en 30 días no estás satisfecho, te devolvemos el dinero.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">¿A qué zonas enviáis?<span class="faq-icon">+</span></button>
-        <div class="faq-answer">Enviamos a toda España peninsular en 24-48h. Para Baleares, Canarias, Ceuta y Melilla consúltanos antes de hacer el pedido.</div>
-      </div>
-    </div>
-  </section>
+    // Luz de relleno (fill light)
+    const fillLight = new THREE.DirectionalLight(0xddeeff, 1.5);
+    fillLight.position.set(-2, 0.5, 1.5);
+    scene.add(fillLight);
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-logo">ZIMA</div>
-    <nav class="footer-links">
-      <a href="#">Política de privacidad</a>
-      <a href="#">Aviso legal</a>
-      <a href="#">Cookies</a>
-      <a href="#">Contacto</a>
-    </nav>
-    <p class="footer-copy">© 2026 ZIMA. Todos los derechos reservados.</p>
-  </footer>
+    // Luz de borde (rim light)
+    const rimLight = new THREE.DirectionalLight(0xccddff, 2.0);
+    rimLight.position.set(-0.5, 3, -2);
+    scene.add(rimLight);
+
+    // Ambiente
+    const ambientLight = new THREE.AmbientLight(0xfff8f0, 0.5);
+    scene.add(ambientLight);
+
+    // --- Controls ---
+    const controls = new OrbitControls(camera, canvas);
+    controls.enablePan = false;
+    controls.enableZoom = false;
+    controls.minPolarAngle = Math.PI * 0.25;
+    controls.maxPolarAngle = Math.PI * 0.75;
+    controls.autoRotate = true;
+    controls.autoRotateSpeed = 1.2;
+    controls.dampingFactor = 0.08;
+    controls.enableDamping = true;
+    controls.target.set(0, 0, 0);
+
+    controls.autoRotate = false; // arranca desactivado — se activa al terminar el reveal
+
+    // Click vs drag: si el puntero se mueve < 8px es click → ir a producto
+    let ptrDownX = 0, ptrDownY = 0;
+    canvas.addEventListener('pointerdown', (e) => {
+      controls.autoRotate = false;
+      ptrDownX = e.clientX;
+      ptrDownY = e.clientY;
+    });
+    canvas.addEventListener('pointerup', (e) => {
+      if (!revealDone) return;
+      const dx = e.clientX - ptrDownX;
+      const dy = e.clientY - ptrDownY;
+      if (Math.sqrt(dx * dx + dy * dy) < 8) {
+        window.location.href = 'producto.html';
+      }
+    });
+
+    // --- Material de tela navy PBR ---
+    const navyMat = new THREE.MeshStandardMaterial({
+      color: new THREE.Color(0x1e4fa0),
+      roughness: 0.88,
+      metalness: 0.0,
+      envMapIntensity: 1.2,
+    });
+
+    // --- Cargar GLB ---
+    let zimaModel = null;
+
+    const loader = new GLTFLoader();
+    loader.load('3d/zima_front.glb', (gltf) => {
+      const model = gltf.scene;
+      zimaModel = model;
+
+      // Centrar y escalar modelo
+      const box = new THREE.Box3().setFromObject(model);
+      const center = box.getCenter(new THREE.Vector3());
+      const size   = box.getSize(new THREE.Vector3());
+      const maxDim = Math.max(size.x, size.y, size.z);
+      const scale  = 1.55 / maxDim;
+
+      model.position.sub(center.multiplyScalar(scale));
+      model.scale.setScalar(scale);
+
+      // Conservar textura original del GLB, solo cambiar color
+      model.traverse(child => {
+        if (child.isMesh) {
+          const mat = child.material;
+          mat.color.set(0x0d2456);
+          mat.roughness = 0.88;
+          mat.metalness = 0.0;
+          mat.envMapIntensity = 1.2;
+          mat.needsUpdate = true;
+          child.castShadow = true;
+          child.receiveShadow = true;
+        }
+      });
+
+      scene.add(model);
+
+      // Mostrar hint
+      setTimeout(() => {
+        const hint = document.getElementById('spinHint');
+        if (hint) hint.classList.add('is-visible');
+      }, 1800);
+    });
+
+    // --- Scroll reveal ---
+    const heroEl        = document.getElementById('hero');
+    const heroProduct   = document.getElementById('heroProduct');
+    const scrollHint    = document.getElementById('heroScrollHint');
+    let revealDone      = false;
+    let scrollHintHidden = false;
+
+    function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+    function onScroll() {
+      const scrollRange = heroEl.offsetHeight - window.innerHeight;
+      const progress    = Math.max(0, Math.min(1, window.scrollY / scrollRange));
+      const eased       = easeOutCubic(progress);
+
+      // Ocultar DESLIZA al primer scroll
+      if (progress > 0.02 && !scrollHintHidden) {
+        scrollHintHidden = true;
+        if (scrollHint) scrollHint.classList.add('is-hidden');
+      }
+
+      // CSS: sube desde abajo (78% → 0%)
+      heroProduct.style.transform = `translateY(${(1 - eased) * 78}%)`;
+
+      // 3D: 2 vueltas completas en el primer 85% del scroll
+      const rotProgress = Math.min(1, progress / 0.85);
+      const rotEased    = easeOutCubic(rotProgress);
+      if (zimaModel) {
+        zimaModel.rotation.y = rotEased * Math.PI * 2 * 2;
+      }
+
+      if (progress >= 0.85 && !revealDone) {
+        revealDone = true;
+        if (zimaModel) zimaModel.rotation.y = 0;
+        controls.reset();
+        canvas.classList.add('is-revealed');
+        heroProduct.classList.add('is-settling');
+        heroProduct.style.transform = 'translateY(0)';
+        setTimeout(() => { controls.autoRotate = true; }, 600);
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll(); // estado inicial
+
+    // --- Render loop ---
+    function animate() {
+      requestAnimationFrame(animate);
+      controls.update();
+      renderer.render(scene, camera);
+    }
+    animate();
+
+    // --- Resize ---
+    window.addEventListener('resize', () => {
+      const w = container.offsetWidth;
+      const h = container.offsetHeight;
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+      renderer.setSize(w, h);
+    });
+  </script>
 
   <script src="js/main.js"></script>
 </body>
